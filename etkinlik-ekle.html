@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Etkinlik Ekle</title>
-    <link rel="stylesheet" href="2416501033.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etkinlik Ekle</title>
+  <link rel="stylesheet" href="2416501033.css">
+  <script type="module" src="js/event-form.js"></script>
 </head>
 <body>
-<header>
+
+  <header>
     <h1>Etkinlik Ekle</h1>
     <nav>
-        <a href="index.html">Ana Sayfa</a>
-          <a href="etkinlikler.html">Etkinlikler</a>
-          <a href="etkinlik-ekle.html">Ekle</a>
-          <a href="etkinlik-guncelle.html">Güncelle</a>
-
+      <a href="index.html">Ana Sayfa</a>
+      <a href="etkinlikler.html">Etkinlikler</a>
+      <a href="etkinlik-ekle.html" class="active">Ekle</a>
     </nav>
-</header>
-    <main>
-    <form class="etkinlik-form">
+  </header>
+
+  <main class="form-sayfasi">
+    <p class="bilgi-notu">Yıldızlı (*) alanlar zorunludur. Bu sprintte form veri kaydetmez; sonuç aşağıda gösterilir.</p>
+
+    <form id="etkinlik-formu" novalidate>
       <div class="form-grup">
-        <label for="ad">Etkinlik adı</label>
+        <label for="ad">Etkinlik Adı *</label>
         <input type="text" id="ad" name="ad">
+        <span id="ad-hata" class="hata-mesaj"></span>
       </div>
 
       <div class="form-grup">
-        <label for="kategori">Kategori</label>
+        <label for="kategori">Kategori *</label>
         <select id="kategori" name="kategori">
-          <option value="" selected>Seçiniz ▾</option>
-          <option value="seminer">Seminer</option>
-          <option value="atolye">Atölye</option>
-          <option value="soylesi">Söyleşi</option>
+          <option value="">Seçiniz</option>
+          <option value="Seminer">Seminer</option>
+          <option value="Atölye">Atölye</option>
+          <option value="Söyleşi">Söyleşi</option>
         </select>
+        <span id="kategori-hata" class="hata-mesaj"></span>
       </div>
 
       <div class="form-grup">
-        <label for="tarih">Tarih</label>
-        <input type="text" id="tarih" name="tarih" class="hata" value="boş bırakıldı">
+        <label for="tarih">Tarih *</label>
+        <input type="date" id="tarih" name="tarih">
+        <span id="tarih-hata" class="hata-mesaj"></span>
+      </div>
+
+      <div class="form-grup">
+        <label for="saat">Saat *</label>
+        <input type="time" id="saat" name="saat">
+        <span id="saat-hata" class="hata-mesaj"></span>
+      </div>
+
+      <div class="form-grup">
+        <label for="yer">Yer *</label>
+        <input type="text" id="yer" name="yer" placeholder="Örn. A Blok Konferans Salonu">
+        <span id="yer-hata" class="hata-mesaj"></span>
+      </div>
+
+      <div class="form-grup">
+        <label for="kapasite">Kontenjan</label>
+        <input type="number" id="kapasite" name="kapasite">
+        <span id="kapasite-hata" class="hata-mesaj"></span>
       </div>
 
       <div class="form-grup">
         <label for="aciklama">Açıklama</label>
-        <textarea id="aciklama" name="aciklama" rows="3"></textarea>
+        <textarea id="aciklama" name="aciklama" rows="4"></textarea>
+        <span id="aciklama-hata" class="hata-mesaj"></span>
       </div>
 
-      <button type="submit" class="btn-primary">Kaydet</button>
+      <button type="submit" class="btn-kaydet">Kaydet</button>
     </form>
+    <div id="form-mesaj"></div>
   </main>
+
+  <footer>
+    <p>zeynep nida çiçek · 2416501033 · 2026</p>
+  </footer>
+
 </body>
 </html>

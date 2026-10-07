@@ -42,7 +42,6 @@ header nav a:hover {
   text-decoration: underline;
 }
 
-/* Ana Gövde */
 main {
   max-width: 900px;
   margin: 1.5rem auto;
@@ -94,7 +93,6 @@ main h2 {
   font-weight: bold;
 }
 
-/* Footer */
 footer {
   max-width: 900px;
   margin: 2.5rem auto 1.5rem auto;
@@ -109,4 +107,498 @@ footer {
   object-fit: cover;
   border-radius: var(--kose);
   display: block;
+}
+.filtre {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.filtre-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.filtre-grup input,
+.filtre-grup select {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#sonuc {
+  font-size: 0.95rem;
+  color: #2b7a0b;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .filtre {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.hata-mesaj {
+  display: block;
+  color: #e02424;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+[aria-invalid="true"] {
+  border-color: #e02424 !important;
+  background-color: #fdf2f2;
+}
+/* SPRINT 3 GÖRÜNÜM UYUMLULUĞU */
+
+/* Kart Stilleri */
+.etkinlik-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.kart {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 1.2rem;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.kategori-etiket {
+  color: #15803d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.bilgi-satir {
+  font-size: 0.88rem;
+  color: #374151;
+  margin: 0;
+}
+
+.aciklama {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin-top: 0.4rem;
+  flex-grow: 1;
+}
+
+.detay-link {
+  color: #15803d;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Butonlar */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #15803d;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #15803d;
+  color: white;
+}
+
+.buton-alani {
+  margin-top: 1.5rem;
+}
+
+/* Detay Sayfası Yerleşimi (Afiş solda, Künye sağda) */
+.detay-izgara {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .detay-izgara {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+.afis-kutusu {
+  background-color: #1e293b;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.detay-afis figcaption {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+}
+
+.detay-kunye-alani {
+  border: 1px solid #e5e7eb;
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  height: fit-content;
+}
+
+.kunye-dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+}
+
+.kunye-dl dt {
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.detay-aciklama-alani {
+  margin-top: 1.5rem;
+}
+
+.detay-butonlar {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+/* FORM SAYFASI STİLLERİ */
+.form-sayfasi {
+  max-width: 650px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.bilgi-notu {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+#etkinlik-formu {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-grup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  width: 100%;
+}
+
+.form-grup label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+.form-grup input,
+.form-grup select,
+.form-grup textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.form-grup textarea {
+  resize: vertical;
+}
+
+/* Hata durumunda kırmızı çerçeve */
+[aria-invalid="true"] {
+  border-color: #e02424 !important;
+  background-color: #fff8f8;
+}
+
+.hata-mesaj {
+  color: #e02424;
+  font-size: 0.78rem;
+  margin-top: 2px;
+}
+
+/* Buton */
+.btn-kaydet {
+  background-color: #15803d;
+  color: #ffffff;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+.basari-kutu {
+  margin-top: 1.5rem;
+  border: 1.5px solid #22c55e;
+  border-radius: 6px;
+  padding: 1rem 1.2rem;
+  background-color: #ffffff;
+}
+
+.basari-kutu p {
+  color: #15803d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+}
+
+.basari-kutu pre {
+  margin: 0;
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: #111827;
+  white-space: pre-wrap;
+}
+/* ANA SAYFA VE KART DÜZENİ */
+.ana-sayfa-icerik {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.ana-sayfa-icerik h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #111827;
+}
+
+.etkinlik-listesi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.kart {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-top: 4px solid currentColor; /* Slaytta kartın üstünde tema rengi çizgi var */
+  border-radius: 6px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.kart h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.kart-kategori {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.kart-detaylar {
+  font-size: 0.85rem;
+  color: #4b5563;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 0.2rem;
+}
+
+.kart-detaylar p {
+  margin: 0;
+}
+
+.kart-aciklama {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin: 0.5rem 0 0.8rem 0;
+  flex-grow: 1;
+}
+
+.kart-detay-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: underline;
+  align-self: flex-start;
+}
+
+.tumunu-gor-alani {
+  margin-top: 2rem;
+}
+
+.btn-tumunu-gor {
+  display: inline-block;
+  background-color: currentColor; /* veya ana temanın rengi */
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+/* DETAY SAYFASI ÖZEL TASARIMI (Slayt Çıktısı 5/7) */
+.detay-kapsayici {
+  max-width: 900px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+.detay-ust-izgara {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .detay-ust-izgara {
+    grid-template-columns: 1.2fr 1fr; /* Afiş solda geniş, künye sağda */
+  }
+}
+
+/* Sol Taraf: Afiş Kartı */
+.afis-alani {
+  margin: 0;
+}
+
+.afis-cerceve {
+  background-color: #1a2238;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.afis-kutu {
+  border: 2px solid #e28743;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.afis-kutu h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.afis-yil {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.afis-alt-bilgi {
+  margin: 1.5rem 0 0 0;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+.afis-alani figcaption {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.4rem;
+  font-style: italic;
+}
+
+/* Sağ Taraf: Künye */
+.kunye-kutusu {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  padding: 1.2rem 1.5rem;
+  height: fit-content;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.kunye-kutusu h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: #111827;
+}
+
+.kunye-tablo {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.kunye-tablo td {
+  padding: 0.5rem 0.3rem;
+  vertical-align: top;
+}
+
+.kunye-tablo td:first-child {
+  width: 90px;
+  color: #4b5563;
+}
+
+/* Alt Taraf: Açıklama ve Butonlar */
+.aciklama-bolumu {
+  margin-top: 2rem;
+}
+
+.aciklama-bolumu h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+.aciklama-bolumu p {
+  font-size: 0.9rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.detay-buton-grubu {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.btn-detay-don,
+.btn-detay-guncelle {
+  display: inline-block;
+  background-color: #15803d; 
+  color: #ffffff !important;
+  text-decoration: none !important;
+  padding: 0.55rem 1.1rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.btn-detay-don:hover,
+.btn-detay-guncelle:hover {
+  opacity: 0.9;
 }

@@ -3,44 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kampüs Etkinlikleri - Ana Sayfa</title>
+  <title>Kampüs Etkinlikleri</title>
   <link rel="stylesheet" href="2416501033.css">
+  <script type="module" src="js/event-list.js"></script>
 </head>
 <body>
 
   <header>
     <h1>Kampüs Etkinlikleri</h1>
+    <p>Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin.</p>
     <nav>
-      <a href="index.html">Ana Sayfa</a>
+      <a href="index.html" class="active">Ana Sayfa</a>
       <a href="etkinlikler.html">Etkinlikler</a>
       <a href="etkinlik-ekle.html">Ekle</a>
-      <a href="etkinlik-guncelle.html">Güncelle</a>
     </nav>
   </header>
 
   <main>
-    <p>Fakültedeki seminer, atölye ve söyleşileri tek yerden takip edin.</p>
-    
-    <h2>Yaklaşan 2 etkinlik</h2>
+    <div class="ana-sayfa-icerik">
+      <h2>Yaklaşan 2 Etkinlik</h2>
 
-    <section class="etkinlikler iki-kart">
-      <article class="kart">
-        <h3>Kariyer Günleri</h3>
-        <p>12 Ekim</p>
-        <a href="etkinlik-detay.html">Detay &rarr;</a>
-      </article>
+      <!-- JS'in 2 kartı basacağı alan -->
+      <section id="etkinlik-listesi" class="etkinlik-listesi" data-limit="2"></section>
 
-      <article class="kart">
-        <h3>Robotik Atölyesi</h3>
-        <p>20 Ekim</p>
-        <a href="etkinlik-detay.html">Detay &rarr;</a>
-      </article>
-    </section>
-
-    <p style="margin-top: 1.5rem;">
-      <a class="link-vurgu" href="etkinlikler.html">Tüm etkinlikleri gör &rarr;</a>
-    </p>
+      <div class="tumunu-gor-alani">
+        <a href="etkinlikler.html" class="btn-tumunu-gor">Tüm etkinlikleri gör</a>
+      </div>
+    </div>
   </main>
+
+  <footer>
+    <p>zeynep nida çiçek · 2416501033 · 2026</p>
+  </footer>
 
 </body>
 </html>

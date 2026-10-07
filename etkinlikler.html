@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tüm Etkinlikler</title>
   <link rel="stylesheet" href="2416501033.css">
+  <script type="module" src="js/event-list.js"></script>
 </head>
 <body>
 
@@ -14,38 +15,30 @@
       <a href="index.html">Ana Sayfa</a>
       <a href="etkinlikler.html">Etkinlikler</a>
       <a href="etkinlik-ekle.html">Ekle</a>
-      <a href="etkinlik-guncelle.html">Güncelle</a>
     </nav>
   </header>
 
   <main>
     <h2>Tüm Etkinlikler</h2>
 
-    <section class="etkinlikler">
-      <article class="kart">
-        <h3>Kariyer Günleri</h3>
-        <p>Seminer</p>
-        <p>12 Ekim</p>
-        <p>A Blok</p>
-        <a href="etkinlik-detay.html">Detay &rarr;</a>
-      </article>
 
-      <article class="kart">
-        <h3>Robotik Atölyesi</h3>
-        <p>Atölye</p>
-        <p>20 Ekim</p>
-        <p>Lab 2</p>
-        <a href="etkinlik-detay.html">Detay &rarr;</a>
-      </article>
+    <form id="filtre-formu" class="filtre">
+      <div class="filtre-grup">
+        <label for="arama">Etkinlik ara</label>
+        <input type="search" id="arama" placeholder="atölye, kariyer...">
+      </div>
 
-      <article class="kart">
-        <h3>Siber Güvenlik</h3>
-        <p>Söyleşi</p>
-        <p>27 Ekim</p>
-        <p>B Blok</p>
-        <a href="etkinlik-detay.html">Detay &rarr;</a>
-      </article>
-    </section>
+      <div class="filtre-grup">
+        <label for="kategori-filtre">Kategori</label>
+        <select id="kategori-filtre">
+          <option value="">Tümü</option>
+        </select>
+      </div>
+    </form>
+    <p id="sonuc"></p>
+
+    
+    <section id="etkinlik-listesi" class="etkinlik-listesi"></section>
   </main>
 
   <footer>
